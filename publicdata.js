@@ -17,7 +17,7 @@ app.use(express.json({ limit: 500000000 }));
 app.use(express.urlencoded({ extended: false }));
 
 //Router Area Finish
-schedule.scheduleJob("0 12 * * *", getRepublicHouseDataRouter);
+schedule.scheduleJob("0 15 * * *", getRepublicHouseDataRouter);
 
 app.use((req, res, next) => {
   const error = new Error(`${req.method} ${req.url} 라우터가 없습니다.`);
